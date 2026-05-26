@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className='relative min-h-screen flex items-center overflow-hidden py-24'
+      className='relative flex items-center overflow-hidden py-24'
     >
 
       {/* Glow decorativo */}
