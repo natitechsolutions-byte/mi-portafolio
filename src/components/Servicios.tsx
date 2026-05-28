@@ -10,7 +10,6 @@ import {
   UserRound,
   Users,
   MenuSquare,
-  MessageCircle,
   ShieldCheck,
   Zap,
   Heart,
@@ -72,27 +71,22 @@ const Servicios = () => {
     {
       icon: <LayoutTemplate />,
       title: 'Landing pages',
-      description: 'Páginas atractivas para convertir visitas en clientes.',
+      description: 'Creamos páginas modernas y atractivas diseñadas para captar clientes y potenciar tu negocio.',
     },
     {
       icon: <UserRound />,
       title: 'Portfolios',
-      description: 'Muestra tu trabajo con un diseño profesional.',
+      description: 'Diseños profesionales para mostrar tus proyectos, servicios y experiencia de manera elegante.',
     },
     {
       icon: <Users />,
       title: 'Páginas para emprendedores',
-      description: 'Presencia online para hacer crecer tu negocio.',
+      description: 'Soluciones digitales pensadas para pequeños negocios que buscan crecer y tener presencia online.',
     },
     {
       icon: <MenuSquare />,
       title: 'Menús digitales',
-      description: 'Ideal para restaurantes, cafeterías y emprendimientos.',
-    },
-    {
-      icon: <MessageCircle />,
-      title: 'Formularios WhatsApp',
-      description: 'Conecta fácilmente con tus clientes.',
+      description: 'Menús interactivos y visuales para restaurantes, cafeterías y emprendimientos gastronómicos etc.',
     },
   ]
 
@@ -127,7 +121,7 @@ const Servicios = () => {
             title="Desarrollo Web"
             subtitle="Páginas modernas que impulsan tu negocio."
             items={desarrolloWeb}
-            footer="Diseños modernos, responsivos y adaptados a ti."
+            footer="Diseños modernos, responsivos y adaptados a tu negocio."
           />
 
         </div>

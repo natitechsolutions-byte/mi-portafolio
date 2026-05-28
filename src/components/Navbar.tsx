@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Menu,X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react'
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
         { name: 'Inicio', link: '#home' },
         { name: 'Acerca de', link: '#about' },
         { name: 'Servicios', link: '#servicios' },
-         { name: 'Proyectos', link: '#projects' },
+        { name: 'Proyectos', link: '#projects' },
         { name: 'Contacto', link: '#contact' },
     ];
 
@@ -35,14 +35,14 @@ Cierra menú móvil*/}
         setIsMenuOpen(false);
     }
     return (
-        <div className='flex justify-center w-full fixed z-50 mt-4'>
+        <div className='fixed top-0 left-0 w-full z-[9999] border-b border-purple-500/10'>
             <motion.nav
                 //Framer Motion (animaciones)
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
-                className={` relative flex w-full max-w-4xl items-center justify-center ${colors.navBg}
-            backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg `}>
+                className={`relative flex w-full items-center justify-center ${colors.navBg}
+                backdrop-blur-lg rounded-none px-4 lg:px-14 py-4 lg:py-5 shadow-lg`}>
                 <div className='flex items-center justify-between w-full space-x-6 lg:space-x-8'>
                     {/*Logo */}
                     <motion.a
@@ -50,7 +50,7 @@ Cierra menú móvil*/}
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center space-x-2">
                         <span className={`text-xl font-bold ${colors.textPrimary}`}>
-                            Nati <span className='text-purple-500'>TechSolutions.</span>
+                            Nati <span className='bg-gradient-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-transparent'>TechSolutions.</span>
                         </span>
 
                     </motion.a>
@@ -97,7 +97,7 @@ Cierra menú móvil*/}
                             className='p-2  rounded-lg bg-gray-700'
                         >
                             {isMenuOpen ? (
-                                <X className='w-5 h-5 text-white'/>
+                                <X className='w-5 h-5 text-white' />
                             ) : (
                                 <Menu className='w-5 h-5 text-white' />
                             )}
@@ -109,7 +109,7 @@ Cierra menú móvil*/}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="md:hidden absolute top-20 left-4 right-4 z-50 rounded-2xl border border-purple-500/30 bg-gray-950/95 backdrop-blur-xl shadow-2xl p-4 "
+                        className="md:hidden absolute top-20 left-4 right-4 z-50 rounded-2xl border-b border-purple-500/20 bg-gray-950/95 backdrop-blur-lg shadow-2xl p-4 "
                     >
                         <div className="flex flex-col gap-3">
                             {navItems.map((item) => (

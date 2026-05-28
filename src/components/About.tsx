@@ -3,7 +3,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className='container relative z-10 mx-auto px-6'
+      className='container relative z-10 mx-auto px-6 py-24'
     >
 
       {/* Glow decorativo */}

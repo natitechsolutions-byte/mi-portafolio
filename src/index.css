@@ -26,3 +26,6 @@ html {
     39% 35%
   )
 }
+html {
+  scroll-padding-top: 90px;
+}

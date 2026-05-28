@@ -30,7 +30,7 @@ const Projects = () => {
         >
 
             {/* Glow decorativo */}
-            <div className="absolute top-0 left-0 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
+            <div className="absolute top-0 left-0 w-72 h-72 bg-purple-600/10 blur-3xl rounded-full"></div>
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500/10 blur-3xl rounded-full"></div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-8 lg:px-14">

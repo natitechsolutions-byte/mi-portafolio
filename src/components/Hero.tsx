@@ -11,11 +11,11 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='relative overflow-hidden pt-28 pb-16'
+      className='relative overflow-hidden pt-32 md:pt-36 pb-20 scroll-mt-28'
     >
 
       {/* Glow decorativo */}
-      <div className='absolute top-20 left-10 w-72 h-72 bg-purple-600/30 blur-3xl rounded-full'></div>
+      <div className='absolute top-20 left-10 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full'></div>
       <div className='absolute bottom-20 right-10 w-80 h-80 bg-fuchsia-500/20 blur-3xl rounded-full'></div>
 
       <div
