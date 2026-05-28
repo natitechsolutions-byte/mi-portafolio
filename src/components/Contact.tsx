@@ -90,7 +90,7 @@ const Contact = () => {
               </div>
 
               <p className='text-purple-100 group-hover:text-white transition'>
-                @natitechsolution
+                @natitechsolutions
               </p>
 
             </a>
@@ -115,7 +115,7 @@ const Contact = () => {
               </div>
 
               <p className='text-purple-100 break-all group-hover:text-white transition'>
-                natitechsolution@gmail.com
+                natitechsolutions@gmail.com
               </p>
 
             </a>

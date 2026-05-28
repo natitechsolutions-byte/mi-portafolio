@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import About from './components/About';
 import Contact from './components/Contact';
 import Servicios from './components/Servicios';
+import Projects from './components/Projects';
 
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
       <Hero />
       <About />
       <Servicios />
-      {/*  <Projects /> */}
+      <Projects />
       <Contact />
     </div>
   )
