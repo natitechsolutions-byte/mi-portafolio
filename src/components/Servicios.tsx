@@ -105,18 +105,11 @@ const Servicios = () => {
       <div className="container relative z-10 mx-auto px-6">
 
         <div className="text-center mb-14">
-          <p className="text-purple-300 font-semibold mb-3">
-            Soluciones tecnológicas para ti y tu negocio
-          </p>
 
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Servicios que ofrece NatiTechSolutions
           </h2>
 
-          <p className="text-purple-100 max-w-3xl mx-auto">
-            Soporte técnico computacional y soluciones digitales para emprendedores
-            y pequeños negocios que necesitan mejorar su tecnología y presencia online.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
