@@ -134,7 +134,7 @@ const Hero = () => {
             <img
               src={logo}
               alt="NatiTechSolutions"
-              className='w-full max-w-[480px] object-contain
+              className='w-full max-w-[400px] object-contain
               hover:scale-105 transition-all duration-500'
             />
 

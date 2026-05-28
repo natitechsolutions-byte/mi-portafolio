@@ -1,4 +1,4 @@
-import { MessageCircle, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 
 const About = () => {
 
@@ -49,44 +49,10 @@ const About = () => {
           >
 
             Ofrezco servicios de formateo, optimización e instalación de software para notebooks
-            y computadores, además de creación de páginas web, landing pages y presencia digital
+             y Pc además de creación de páginas web, landing pages y presencia digital
             para negocios que necesitan mejorar su imagen y visibilidad online.
 
           </p>
-
-          <p
-            className='mb-8 max-w-xl text-purple-200 leading-relaxed'
-            data-aos='fade-up'
-            data-aos-delay='350'
-          >
-
-            Mi objetivo es ayudar a emprendedores que necesitan apoyo tecnológico accesible,
-            moderno y profesional para impulsar sus negocios.
-
-          </p>
-
-          {/* CTA */}
-          <div
-            className='flex mt-2'
-            data-aos='fade-up'
-            data-aos-delay='400'
-          >
-            <a href="https://wa.me/56989305299" target="_blank">
-
-              <button
-                className='flex items-center gap-2 px-6 py-3 rounded-full
-                border border-purple-400 bg-white/10 text-white font-semibold
-                hover:bg-purple-600 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
-                hover:scale-105 transition-all duration-300 shadow-lg'
-              >
-
-                <MessageCircle size={18} />
-                Hablemos por WhatsApp
-
-              </button>
-
-            </a>
-          </div>
 
         </div>
 
