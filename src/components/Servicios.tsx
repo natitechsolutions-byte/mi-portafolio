@@ -67,51 +67,63 @@ const Servicios = () => {
          
         </div>
 
-        <div className="space-y-6 max-w-6xl mx-auto">
-          {servicios.map((service) => (
-            <div
-              key={service.number}
-              className="rounded-3xl border border-purple-500/50 bg-white/5 backdrop-blur-xl p-4 md:p-8 shadow-[0_0_35px_rgba(168,85,247,0.18)]"
-            >
-              <div className="grid md:grid-cols-[90px_120px_1fr_1.3fr] gap-4 md:gap-6 items-center">
-                <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-purple-800 to-fuchsia-600 flex items-center justify-center text-2xl md:text-4xl font-bold shadow-[0_0_25px_rgba(168,85,247,0.45)]">
-                  {service.number}
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+ {servicios.map((service) => (
+  <div
+    key={service.number}
+    className="rounded-3xl border border-purple-500/50 bg-white/5 backdrop-blur-xl p-5 md:p-6 shadow-[0_0_35px_rgba(168,85,247,0.18)]"
+  >
+    {/* Número */}
+    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-purple-800 to-fuchsia-600 flex items-center justify-center text-2xl md:text-3xl font-bold shadow-[0_0_25px_rgba(168,85,247,0.45)]">
+      {service.number}
+    </div>
 
-                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border border-fuchsia-400/70 bg-purple-950/50 flex items-center justify-center text-fuchsia-300 shadow-[0_0_30px_rgba(217,70,239,0.25)]">
-                  {service.icon}
-                </div>
+    {/* Icono + Título */}
+    <div className="flex items-center gap-4 mt-6">
+      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-fuchsia-400/70 bg-purple-950/50 flex items-center justify-center text-fuchsia-300 shadow-[0_0_30px_rgba(217,70,239,0.25)] flex-shrink-0">
+        {service.icon}
+      </div>
 
-                <div>
-                  <h3 className="text-xl md:text-3xl font-bold uppercase">
-                    {service.title}
-                  </h3>
-                  <h4 className="text-xl md:text-3xl font-bold uppercase text-fuchsia-400 mt-1">
-                    {service.highlight}
-                  </h4>
-                  <p className="text-purple-100 mt-3 text-sm md:text-base leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+      <div>
+        <h3 className="text-xl md:text-2xl font-bold uppercase leading-tight">
+          {service.title}
+        </h3>
 
-                <div className="md:border-l md:border-purple-500/30 md:pl-8">
-                  <h5 className="text-fuchsia-300 font-bold text-xl mb-4">
-                    Ideal para:
-                  </h5>
+        <h4 className="text-xl md:text-2xl font-bold uppercase text-fuchsia-400 leading-tight mt-1">
+          {service.highlight}
+        </h4>
+      </div>
+    </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-                    {service.ideal.map((item) => (
-                      <div key={item} className="flex items-center gap-3 text-purple-50">
-                        <CheckCircle size={20} className="text-fuchsia-400 flex-shrink-0" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    {/* Descripción */}
+    <p className="text-purple-100 mt-5 text-sm md:text-base leading-relaxed">
+      {service.description}
+    </p>
+
+    {/* Ideal para */}
+    <div className="mt-6">
+      <h5 className="text-fuchsia-300 font-bold text-lg md:text-xl mb-4">
+        Ideal para:
+      </h5>
+
+      <div className="space-y-3">
+        {service.ideal.map((item) => (
+          <div
+            key={item}
+            className="flex items-center gap-3 text-purple-50 text-sm md:text-base"
+          >
+            <CheckCircle
+              size={18}
+              className="text-fuchsia-400 flex-shrink-0"
+            />
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+))}
+</div>
 
         <div className="text-center mt-14 mb-6">
           <h3 className="text-2xl md:text-3xl font-bold uppercase">
