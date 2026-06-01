@@ -1,222 +1,144 @@
 import {
-    MonitorCog,
-    HardDriveDownload,
-    Gauge,
-    Brush,
-    Folder,
-    BadgeCheck,
-    Globe,
-    LayoutTemplate,
-    UserRound,
-    Users,
-    MenuSquare,
-    ShieldCheck,
-    Zap,
-    Heart,
+  Store,
+  UserRound,
+  QrCode,
+  CheckCircle,
+  Palette,
+  Smartphone,
+  MessageCircle,
+  FilePenLine,
+  Globe,
+  GraduationCap,
 } from 'lucide-react'
 
-interface ServiceBoxProps {
-    icon: React.ReactNode
-    title: string
-    subtitle: string
-    items: {
-        icon: React.ReactNode
-        title: string
-        description: string
-    }[]
-    footer: string
-}
-
-interface FeatureProps {
-    icon: React.ReactNode
-    title: string
-    text: string
-}
-
 const Servicios = () => {
-    const soporteTecnico = [
-        {
-            icon: <MonitorCog />,
-            title: 'Formateo Windows',
-            description: 'Instalación de Windows 10 y 11.',
-        },
-        {
-            icon: <HardDriveDownload />,
-            title: 'Instalación de drivers',
-            description: 'Controladores actualizados para tu equipo.',
-        },
-        {
-            icon: <Gauge />,
-            title: 'Optimización notebook',
-            description: 'Mejor rendimiento y mayor velocidad.',
-        },
-        {
-            icon: <Brush />,
-            title: 'Limpieza de software',
-            description: 'Eliminación de virus y programas innecesarios.',
-        },
-        {
-            icon: <Folder />,
-            title: 'Respaldo de archivos',
-            description: 'Protección de información importante.',
-        },
-        {
-            icon: <BadgeCheck />,
-            title: 'Instalación de Office',
-            description: 'Instalación y configuración. El cliente debe contar con licencia válida.',
-        },
-    ]
+  const servicios = [
+    {
+      number: '01',
+      icon: <Store size={46} />,
+      title: 'Página para',
+      highlight: 'tu negocio',
+      description:
+        'Muestra tus servicios, horarios, ubicación y formas de contacto en una página profesional.',
+      ideal: ['Peluquerías', 'Pastelerías', 'Salones de belleza', 'Técnicos', 'Tiendas', 'Emprendimientos'],
+    },
+    {
+      number: '02',
+      icon: <UserRound size={46} />,
+      title: 'Página',
+      highlight: 'profesional',
+      description:
+        'Muestra quién eres, tu experiencia, tus trabajos y cómo contactarte.',
+      ideal: ['Técnicos', 'Freelancers', 'Diseñadores', 'Consultores', 'Profesionales independientes', 'Creativos'],
+    },
+    {
+      number: '03',
+      icon: <QrCode size={46} />,
+      title: 'Menú digital',
+      highlight: 'con código QR',
+      description:
+        'Tus clientes escanean un código QR y pueden ver tu menú desde cualquier celular.',
+      ideal: ['Restaurantes', 'Food Trucks', 'Cafeterías', 'Comida rápida'],
+    },
+  ]
 
-    const desarrolloWeb = [
-        {
-            icon: <LayoutTemplate />,
-            title: 'Landing pages',
-            description: 'Creamos páginas modernas y atractivas diseñadas para captar clientes y potenciar tu negocio.',
-        },
-        {
-            icon: <UserRound />,
-            title: 'Portfolios',
-            description: 'Diseños profesionales para mostrar tus proyectos, servicios y experiencia de manera elegante.',
-        },
-        {
-            icon: <Users />,
-            title: 'Páginas para emprendedores',
-            description: 'Soluciones digitales pensadas para pequeños negocios que buscan crecer y tener presencia online.',
-        },
-        {
-            icon: <MenuSquare />,
-            title: 'Menús digitales',
-            description: 'Menús interactivos y visuales para restaurantes, cafeterías y emprendimientos gastronómicos etc.',
-        },
-    ]
+  const incluye = [
+    { icon: <Palette />, title: 'Diseño personalizado' },
+    { icon: <Smartphone />, title: 'Adaptación celular y PC' },
+    { icon: <MessageCircle />, title: 'Botón WhatsApp' },
+    { icon: <FilePenLine />, title: 'Formulario de contacto' },
+    { icon: <Globe />, title: 'Publicación en internet' },
+    { icon: <GraduationCap />, title: 'Ayuda para aprender a usarla' },
+  ]
 
-    return (
-        <section id="servicios" className="relative overflow-hidden text-white">
+  return (
+    <section id="servicios" className="relative overflow-hidden text-white py-20">
+      <div className="absolute top-20 left-0 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500/10 blur-3xl rounded-full"></div>
 
-            <div className="absolute top-20 left-0 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500/10 blur-3xl rounded-full"></div>
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="text-center mb-12">
+          <p className="text-fuchsia-400 font-semibold tracking-widest uppercase">
+            Desarrollo web
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mt-3">
+            Nuestros servicios
+          </h2>
+          <p className="text-purple-100 max-w-2xl mx-auto mt-4">
+            Creamos páginas web simples, modernas y pensadas para hacer crecer tu emprendimiento.
+          </p>
+        </div>
 
-            <div className="container relative z-10 mx-auto px-6">
-
-                <div className="text-center mb-14">
-
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        Servicios que ofrece NatiTechSolutions
-                    </h2>
-
+        <div className="space-y-6 max-w-6xl mx-auto">
+          {servicios.map((service) => (
+            <div
+              key={service.number}
+              className="rounded-3xl border border-purple-500/50 bg-white/5 backdrop-blur-xl p-6 md:p-8 shadow-[0_0_35px_rgba(168,85,247,0.18)]"
+            >
+              <div className="grid md:grid-cols-[90px_120px_1fr_1.3fr] gap-6 items-center">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-800 to-fuchsia-600 flex items-center justify-center text-4xl font-bold shadow-[0_0_25px_rgba(168,85,247,0.45)]">
+                  {service.number}
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
-                    <ServiceBox
-                        icon={<MonitorCog size={32} />}
-                        title="Soporte Técnico"
-                        subtitle="Soluciones rápidas y efectivas para tu equipo."
-                        items={soporteTecnico}
-                        footer="Seguridad, rendimiento y confianza para tu equipo."
-                    />
-
-                    <ServiceBox
-                        icon={<Globe size={32} />}
-                        title="Desarrollo Web"
-                        subtitle="Páginas modernas que impulsan tu negocio."
-                        items={desarrolloWeb}
-                        footer="Diseños modernos, responsivos y adaptados a tu negocio."
-                    />
-
-                </div>
-
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12">
-
-                    <Feature icon={<ShieldCheck />} title="Confiable" text="Trabajo seguro y garantizado." />
-                    <Feature icon={<Zap />} title="Rápido" text="Soluciones efectivas." />
-                    <Feature icon={<BadgeCheck />} title="Profesional" text="Atención dedicada y de calidad." />
-                    <Feature icon={<Heart />} title="A tu medida" text="Soluciones adaptadas a tus necesidades." />
-
-                </div>
-
-            </div>
-        </section>
-    )
-}
-
-const ServiceBox = ({ icon, title, subtitle, items, footer }: ServiceBoxProps) => {
-    return (
-        <div className="rounded-3xl border border-purple-500/40 bg-white/5 backdrop-blur-xl p-8 shadow-[0_0_40px_rgba(168,85,247,0.18)]">
-
-            <div className="flex items-center gap-5 mb-6">
-                <div
-                    className="
-  w-16 h-16
-  flex-shrink-0
-  rounded-full
-  bg-gradient-to-br from-purple-700 to-fuchsia-500
-  flex items-center justify-center
-  text-white
-  shadow-[0_0_30px_rgba(168,85,247,0.5)]
-"
-                >
-                    {icon}
+                <div className="w-24 h-24 rounded-full border border-fuchsia-400/70 bg-purple-950/50 flex items-center justify-center text-fuchsia-300 shadow-[0_0_30px_rgba(217,70,239,0.25)]">
+                  {service.icon}
                 </div>
 
                 <div>
-                    <h3 className="text-3xl md:text-4xl font-bold">
-                        {title}
-                    </h3>
-                    <p className="text-purple-200 mt-2">
-                        {subtitle}
-                    </p>
+                  <h3 className="text-2xl md:text-3xl font-bold uppercase">
+                    {service.title}
+                  </h3>
+                  <h4 className="text-2xl md:text-3xl font-bold uppercase text-fuchsia-400 mt-1">
+                    {service.highlight}
+                  </h4>
+                  <p className="text-purple-100 mt-4 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
+
+                <div className="md:border-l md:border-purple-500/30 md:pl-8">
+                  <h5 className="text-fuchsia-300 font-bold text-xl mb-4">
+                    Ideal para:
+                  </h5>
+
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {service.ideal.map((item) => (
+                      <div key={item} className="flex items-center gap-3 text-purple-50">
+                        <CheckCircle size={20} className="text-fuchsia-400 flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div className="space-y-5">
-                {items.map((item, index) => (
-                    <div key={index} className="flex gap-4 border-b border-purple-500/20 pb-4 last:border-b-0">
-
-                        <div className="min-w-12 h-12 rounded-full bg-gradient-to-br from-purple-700 to-purple-500 flex items-center justify-center text-white">
-                            {item.icon}
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold text-lg">
-                                {item.title}
-                            </h4>
-                            <p className="text-purple-100 text-sm">
-                                {item.description}
-                            </p>
-                        </div>
-
-                    </div>
-                ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl bg-purple-900/40 border border-purple-400/30 p-4 text-purple-100 font-semibold">
-                {footer}
-            </div>
-
+          ))}
         </div>
-    )
-}
 
-const Feature = ({ icon, title, text }: FeatureProps) => {
-    return (
-        <div className="flex items-center gap-4 rounded-2xl bg-white/5 border border-purple-400/20 p-5 backdrop-blur-xl">
+        <div className="text-center mt-14 mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold uppercase">
+            Todos nuestros sitios incluyen
+          </h3>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          {incluye.map((item) => (
             <div
-                className="w-16 h-16 flex-shrink-0 rounded-full bg-gradient-to-br from-purple-700 to-fuchsia-500 flex items-center justify-center
-                           text-white shadow-[0_0_30px_rgba(168,85,247,0.5)]"
+              key={item.title}
+              className="rounded-2xl border border-purple-500/40 bg-white/5 p-5 text-center backdrop-blur-xl"
             >
-                {icon}
+              <div className="mx-auto mb-3 w-14 h-14 rounded-full bg-gradient-to-br from-purple-700 to-fuchsia-500 flex items-center justify-center text-white shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+                {item.icon}
+              </div>
+              <h4 className="font-bold text-sm uppercase">
+                {item.title}
+              </h4>
             </div>
-            <div>
-                <h4 className="font-bold text-white">
-                    {title}
-                </h4>
-                <p className="text-sm text-purple-200">
-                    {text}
-                </p>
-            </div>
+          ))}
         </div>
-    )
+      </div>
+    </section>
+  )
 }
 
-export default Servicios;
+export default Servicios
