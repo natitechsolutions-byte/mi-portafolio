@@ -20,7 +20,7 @@ const About = () => {
             className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white'
             data-aos='fade-up'
           >
-            Tecnología y soluciones digitales para emprendedores
+            Páginas web y soporte tecnológico para emprendedores
           </h2>
 
           <p
@@ -29,8 +29,16 @@ const About = () => {
             data-aos-delay='200'
           >
 
-            NatiTechSolutions es un emprendimiento orientado al soporte técnico computacional
-            y soluciones digitales para emprendedores y pequeños negocios.
+         NatiTechSolutions nace con el propósito de ayudar a emprendedores y pequeños negocios a crecer mediante soluciones tecnológicas simples, modernas y accesibles.
+          </p>
+           <p
+            className='mb-6 max-w-xl text-purple-100 leading-relaxed'
+            data-aos='fade-up'
+            data-aos-delay='200'
+          >
+
+            Creamos páginas web profesionales que permiten mostrar productos y servicios, mejorar la imagen de tu negocio y llegar a más personas. También ofrecemos soporte técnico para computadores y notebooks, ayudando a mantener tus equipos funcionando de forma óptima.
+
 
           </p>
 
@@ -39,10 +47,8 @@ const About = () => {
             data-aos='fade-up'
             data-aos-delay='300'
           >
+            Creemos que toda persona y emprendimiento merece tener las herramientas necesarias para destacar y crecer en el mundo digital.
 
-            Ofrezco servicios de formateo, optimización e instalación de software para notebooks
-             y Pc además de creación de páginas web, landing pages y presencia digital
-            para negocios que necesitan mejorar su imagen y visibilidad online.
 
           </p>
 

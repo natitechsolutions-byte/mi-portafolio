@@ -44,7 +44,7 @@ const Hero = () => {
             font-bold text-white leading-tight mb-6'
           >
 
-            Transformo ideas en páginas web modernas y profesionales
+            Creamos páginas web para hacer crecer tu negocio.
 
           </h1>
 
@@ -53,8 +53,7 @@ const Hero = () => {
             leading-relaxed max-w-xl mb-8'
           >
 
-            Soporte técnico y soluciones digitales para emprendedores
-            y pequeños negocios.
+            Ayudamos a emprendedores y pequeños negocios a destacar en Internet con páginas web modernas, profesionales y adaptadas a sus necesidades.
 
           </p>
 

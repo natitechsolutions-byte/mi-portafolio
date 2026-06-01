@@ -64,9 +64,7 @@ const Servicios = () => {
           <h2 className="text-3xl md:text-5xl font-bold mt-3">
             Nuestros servicios
           </h2>
-          <p className="text-purple-100 max-w-2xl mx-auto mt-4">
-            Creamos páginas web simples, modernas y pensadas para hacer crecer tu emprendimiento.
-          </p>
+         
         </div>
 
         <div className="space-y-6 max-w-6xl mx-auto">
