@@ -1,77 +1,40 @@
-import {
-  MessageCircle,
-  Mail,
-  Sparkles
-} from 'lucide-react'
-import { FaInstagram } from 'react-icons/fa'
+import logo from "../assets/logo.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden py-24 scroll-mt-28"
-    >
-      <div className="absolute top-10 left-0 w-72 h-72 bg-purple-600/10 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500/10 blur-3xl rounded-full"></div>
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#B87905] via-[#F7D77A] to-[#B87905] py-8 md:py-10">
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-8 lg:px-14">
-        <div className="max-w-5xl mx-auto rounded-[2rem] bg-white/5 border border-purple-400/20 backdrop-blur-xl shadow-[0_0_60px_rgba(168,85,247,0.18)] px-6 py-12 md:px-16 md:py-16 text-center">
+      {/* Puntitos derecha */}
+      <div className="absolute right-0 top-0 h-full w-[320px] overflow-hidden">
+        <div className="pixel-pattern"></div>
+      </div>
+      {/* Logo circular */}
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6 md:gap-12 relative z-10">
+       
 
-          <div className="flex justify-center items-center gap-2 mb-5 text-purple-300 font-semibold">
-            <Sparkles size={18} />
-            Contacto
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            ¿Listo para llevar tu negocio al siguiente nivel?
+        <div className="text-center md:text-left">
+          <h2 className="font-Montserrat text-[#111] text-lg md:text-2xl">
+            ¿LISTO PARA LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL?
           </h2>
 
-          <p className="text-purple-100 max-w-2xl mx-auto leading-relaxed mb-10 text-base sm:text-lg">
-            Escríbeme y trabajemos juntas en una página web moderna,
-            profesional y adaptada a tu emprendimiento.
+          <p className="text-[#111]/80 mt-1 text-sm md:text-base">
+            Hablemos de tu proyecto y hagámoslo realidad.
           </p>
 
           <a
             href="https://wa.me/56989305299"
             target="_blank"
             rel="noreferrer"
+            className="inline-flex items-center gap-2 mt-4 bg-[#111] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-black transition"
           >
-            <button className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-500 text-white font-semibold text-lg shadow-lg hover:shadow-[0_0_45px_rgba(168,85,247,0.7)] hover:scale-105 transition-all duration-300">
-              <MessageCircle size={22} />
-              Hablar por WhatsApp
-            </button>
+            <FaWhatsapp />
+            Escríbenos por WhatsApp
           </a>
-
-          <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10">
-            <a
-              href="https://www.instagram.com/natitechsolutions/"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-3 text-purple-200 hover:text-white transition-all duration-300"
-            >
-              <FaInstagram size={24} />
-              <span className="font-medium">@natitechsolutions</span>
-            </a>
-
-            <a
-              href="mailto:natitechsolutions@gmail.com"
-              className="flex items-center gap-3 text-purple-200 hover:text-white transition-all duration-300 break-all"
-            >
-              <Mail size={24} />
-              <span className="font-medium">natitechsolutions@gmail.com</span>
-            </a>
-          </div>
-
-          <div className="mt-12 pt-6 border-t border-purple-400/20">
-            <p className="text-sm text-purple-300">
-              Tecnología que impulsa tu negocio 🚀
-            </p>
-          </div>
-
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

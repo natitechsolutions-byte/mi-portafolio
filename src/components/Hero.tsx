@@ -1,150 +1,130 @@
-import {
-  ExternalLink,
-  MessageCircle,
-  Sparkles
-} from 'lucide-react'
 
-import logo from '../assets/logo.png'
+import { FaWhatsapp } from "react-icons/fa";
+import mockup from "../assets/mockup.png";
+import {
+  LuZap,
+  LuMonitorSmartphone,
+  LuShieldCheck,
+  LuHeadphones,
+} from "react-icons/lu";
+import type { IconType } from "react-icons";
+
 
 const Hero = () => {
+  
+  const items: [IconType, string, string][] = [
+    [LuZap, "Rápido", "y Eficiente"],
+    [LuMonitorSmartphone, "100%", "Responsivo"],
+    [LuShieldCheck, "Seguro", "y Confiable"],
+    [LuHeadphones, "Soporte", "Personalizado"],
+  ];
 
   return (
     <section
-      id='home'
-      className='relative overflow-hidden pt-32 md:pt-36 pb-20 scroll-mt-28'
+      id="home"
+      className="relative mt-36 md:mt-36   overflow-hidden"
     >
-
-      {/* Glow decorativo */}
-      <div className='absolute top-20 left-10 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full'></div>
-      <div className='absolute bottom-20 right-10 w-80 h-80 bg-fuchsia-500/20 blur-3xl rounded-full'></div>
-
       <div
-        className='container relative z-10 mx-auto
-        px-4 sm:px-8 lg:px-14
-        flex flex-col lg:flex-row
-        items-center justify-between
-        gap-14'
+        className="
+          max-w-7xl mx-auto px-6
+          grid grid-cols-1 lg:grid-cols-2
+          gap-10 lg:gap-8
+          items-center
+        "
       >
-
         {/* TEXTO */}
-        <div
-          className='lg:w-1/2 w-full
-          flex flex-col
-          items-center lg:items-start
-          text-center lg:text-left'
-        >
-
-          <div className='flex items-center gap-2 mb-4 text-purple-300 font-semibold'>
-            <Sparkles size={18} />
-            NatiTechSolutions
-          </div>
-
-          <h1
-            className='text-4xl sm:text-5xl lg:text-6xl
-            font-bold text-white leading-tight mb-6'
-          >
-
-            Creamos páginas web para hacer crecer tu negocio.
-
-          </h1>
-
-          <p
-            className='text-purple-100 text-lg
-            leading-relaxed max-w-xl mb-8'
-          >
-
-            Ayudamos a emprendedores y pequeños negocios a destacar en Internet con páginas web modernas, profesionales y adaptadas a sus necesidades.
-
+        <div className="relative z-20 order-1 w-full text-center lg:text-left">
+          <p className="text-[#C89B3C] font-extrabold tracking-[0.18em] text-xs sm:text-sm mb-3">
+            NATITECH SOLUTIONS
           </p>
 
-          {/* BOTONES */}
-          <div
-            className='flex flex-col sm:flex-row
-            justify-center lg:justify-start
-            gap-4'
-          >
+          <div className="max-w-[680px] mx-auto lg:mx-0">
+            <h1
+              className="
+                font-Montserrat
+                font-bold
+                text-[34px]
+                sm:text-[44px]
+                md:text-[58px]
+                lg:text-[58px]
+                xl:text-[55px]
+                leading-[1]
+                sm:leading-[0.98]
+                tracking-[-0.04em]
+              "
+            >
+              <span className="block sm:whitespace-nowrap">
+                PÁGINAS WEB MODERNAS
+              </span>
+              <span className="block text-[#C89B3C]">PARA EMPRESAS Y EMPRENDEDORES</span>
+            
+            </h1>
+          </div>
 
-            <a href="#projects">
+          <p className="mt-5 md:mt-6 text-gray-600 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Diseñamos sitios web elegantes, rápidos y adaptados a celular, tablet y computador, pensados para transmitir confianza y fortalecer la presencia digital de tu negocio.
+          </p>
 
-              <button
-                className='inline-flex items-center justify-center
-                text-white
-                bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-400
-                py-3 px-8 rounded-full
-                text-base sm:text-lg font-semibold
-                hover:shadow-[0_0_40px_rgba(168,85,247,0.8)]
-                hover:scale-105 transition-all duration-300'
-              >
-
-                <ExternalLink className='w-5 h-5 mr-2' />
-                Ver proyectos
-
-              </button>
-
-            </a>
-
+          <div className="mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href="https://wa.me/56989305299"
               target="_blank"
               rel="noreferrer"
+              className="w-full sm:w-[240px] bg-[#C89B3C] text-white px-6 md:px-7 py-4 rounded-xl font-bold shadow-xl hover:bg-[#a77f2d] transition flex items-center justify-center gap-2"
             >
-
-              <button
-                className='flex items-center gap-2
-                px-6 py-3 rounded-full
-                bg-white/10
-                border border-purple-400
-                text-white font-semibold
-                hover:bg-purple-600
-                hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
-                hover:scale-105
-                transition-all duration-300 shadow-lg'
-              >
-
-                <MessageCircle size={18} />
-                Hablar por WhatsApp
-
-              </button>
-
+              <FaWhatsapp size={20} />
+              Solicitar Cotización
             </a>
 
+            <a
+              href="#portfolio"
+              className="w-full sm:w-[240px] border border-[#C89B3C] text-[#111] px-6 md:px-7 py-4 rounded-xl font-bold hover:bg-[#C89B3C] hover:text-white transition text-center"
+            >
+              Ver Portafolio
+            </a>
           </div>
 
+          <div className="mt-9 md:mt-10 grid grid-cols-4 gap-2 md:gap-7">
+
+          {items.map(([Icon, title, text]) => (
+            <div
+              key={title}
+              className="flex flex-col items-center text-center"
+            >
+              <Icon className="text-[#C89B3C] w-5 h-5 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+
+              <p className="font-semibold text-[10px] sm:text-xs md:text-sm mt-1">
+                {title}
+              </p>
+
+              <p className="text-[8px] sm:text-[9px] md:text-xs text-gray-500 leading-tight">
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
         </div>
 
-        {/* LOGO */}
-        <div
-          className='lg:w-1/2 w-full
-          flex justify-center'
-        >
-
-          <div
-            className='relative
-            rounded-3xl
-            bg-white/5
-            border border-purple-400/20
-            backdrop-blur-xl
-            shadow-[0_0_60px_rgba(168,85,247,0.25)]
-            p-6'
-          >
-
-            <div className='absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full'></div>
-
-            <img
-              src={logo}
-              alt="NatiTechSolutions"
-              className='w-full max-w-[400px] object-contain
-              hover:scale-105 transition-all duration-500'
-            />
-
-          </div>
-
+        {/* IMAGEN */}
+        <div className="relative z-10 order-2 w-full flex justify-center lg:justify-end">
+          <img
+            src={mockup}
+            alt="NatiTech Solutions"
+            className="
+              mt-6 lg:mt-0
+              w-full
+              max-w-[320px]
+              sm:max-w-[420px]
+              md:max-w-[520px]
+              lg:max-w-[680px]
+              object-contain
+              lg:-ml-20
+            "
+          />
         </div>
-
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

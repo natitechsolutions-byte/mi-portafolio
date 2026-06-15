@@ -1,154 +1,139 @@
+import { useState } from "react";
 import {
-  Store,
-  UserRound,
-  QrCode,
-  CheckCircle,
-  Palette,
-  Smartphone,
-  MessageCircle,
-  FilePenLine,
-  Globe,
-  GraduationCap,
-} from 'lucide-react'
+  FaChevronLeft,
+  FaChevronRight,
+  FaLaptopCode,
+  FaShoppingCart,
+  FaPaintBrush,
+  FaCog,
+} from "react-icons/fa";
 
-const Servicios = () => {
-  const servicios = [
-    {
-      number: '01',
-      icon: <Store size={30}/>,
-      title: 'Página para',
-      highlight: 'tu negocio',
-      description:
-        'Muestra tus servicios, horarios, ubicación y formas de contacto en una página profesional.',
-      ideal: ['Peluquerías', 'Pastelerías', 'Salones de belleza', 'Técnicos', 'Tiendas', 'Emprendimientos'],
-    },
-    {
-      number: '02',
-      icon: <UserRound size={30} />,
-      title: 'Página',
-      highlight: 'profesional',
-      description:
-        'Muestra quién eres, tu experiencia, tus trabajos y cómo contactarte.',
-      ideal: ['Técnicos', 'Freelancers', 'Diseñadores', 'Consultores', 'Profesionales independientes', 'Creativos'],
-    },
-    {
-      number: '03',
-      icon: <QrCode size={30} />,
-      title: 'Menú digital',
-      highlight: 'con código QR',
-      description:
-        'Tus clientes escanean un código QR y pueden ver tu menú desde cualquier celular.',
-      ideal: ['Restaurantes', 'Food Trucks', 'Cafeterías', 'Comida rápida'],
-    },
-  ]
+const services = [
+  {
+    icon: FaLaptopCode,
+    title: "Página web profesional",
+    description:
+      "Sitios modernos para mostrar tu empresa, servicios, ubicación y contacto.",
+  },
+  {
+    icon: FaShoppingCart,
+    title: "Catálogo digital",
+    description:
+      "Muestra tus productos o servicios de forma ordenada, moderna y fácil de compartir.",
+  },
+  {
+    icon: FaPaintBrush,
+    title: "Rediseño web",
+    description:
+      "Modernizamos páginas antiguas para que se vean actuales, rápidas y profesionales.",
+  },
+  {
+    icon: FaCog,
+    title: "Mantención web",
+    description:
+      "Cambios, actualizaciones y soporte para mantener tu sitio funcionando correctamente.",
+  },
+];
 
-  const incluye = [
-  { icon: <Palette size={22} />, title: 'Diseño personalizado' },
-  { icon: <Smartphone size={22} />, title: 'Adaptación celular y PC' },
-  { icon: <MessageCircle size={22} />, title: 'Botón WhatsApp' },
-  { icon: <FilePenLine size={22} />, title: 'Formulario de contacto' },
-  { icon: <Globe size={22} />, title: 'Publicación en internet' },
-  { icon: <GraduationCap size={22} />, title: 'Ayuda para aprender a usarla' },
-]
+const Services = () => {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % services.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? services.length - 1 : prev - 1));
+  };
+
+  const CurrentIcon = services[current].icon;
 
   return (
-    <section id="servicios" className="relative overflow-hidden text-white py-10 md:py-20">
-      <div className="absolute top-20 left-0 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500/10 blur-3xl rounded-full"></div>
+    <section id="services" className="py-16 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 text-center">
+        <p className="text-[#C89B3C] font-bold tracking-[0.25em] text-xs md:text-sm">
+          SERVICIOS
+        </p>
 
-      <div className="container relative z-10 mx-auto px-6">
-        <div className="text-center mb-8 md:mb-12">
-          <p className="text-fuchsia-400 font-semibold tracking-widest uppercase">
-            Desarrollo web
-          </p>
-          <h2 className="text-3xl md:text-5xl font-bold mt-3">
-            Nuestros servicios
-          </h2>
-         
-        </div>
+        <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight">
+          Soluciones web para que tu negocio destaque en internet
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
- {servicios.map((service) => (
-  <div
-    key={service.number}
-    className="rounded-3xl border border-purple-500/50 bg-white/5 backdrop-blur-xl p-5 md:p-6 shadow-[0_0_35px_rgba(168,85,247,0.18)]"
-  >
-    {/* Número */}
-    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-purple-800 to-fuchsia-600 flex items-center justify-center text-2xl md:text-3xl font-bold shadow-[0_0_25px_rgba(168,85,247,0.45)]">
-      {service.number}
-    </div>
-
-    {/* Icono + Título */}
-    <div className="flex items-center gap-4 mt-6">
-      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-fuchsia-400/70 bg-purple-950/50 flex items-center justify-center text-fuchsia-300 shadow-[0_0_30px_rgba(217,70,239,0.25)] flex-shrink-0">
-        {service.icon}
-      </div>
-
-      <div>
-        <h3 className="text-xl md:text-2xl font-bold uppercase leading-tight">
-          {service.title}
-        </h3>
-
-        <h4 className="text-xl md:text-2xl font-bold uppercase text-fuchsia-400 leading-tight mt-1">
-          {service.highlight}
-        </h4>
-      </div>
-    </div>
-
-    {/* Descripción */}
-    <p className="text-purple-100 mt-5 text-sm md:text-base leading-relaxed">
-      {service.description}
-    </p>
-
-    {/* Ideal para */}
-    <div className="mt-6">
-      <h5 className="text-fuchsia-300 font-bold text-lg md:text-xl mb-4">
-        Ideal para:
-      </h5>
-
-      <div className="space-y-3">
-        {service.ideal.map((item) => (
-          <div
-            key={item}
-            className="flex items-center gap-3 text-purple-50 text-sm md:text-base"
+        {/* MOBILE: CARRUSEL */}
+        <div className="md:hidden mt-10 relative max-w-[360px] mx-auto">
+          <button
+            onClick={prevSlide}
+            className="absolute left-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-[#071B3A]"
           >
-            <CheckCircle
-              size={18}
-              className="text-fuchsia-400 flex-shrink-0"
-            />
-            <span>{item}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-))}
-</div>
+            <FaChevronLeft size={14} />
+          </button>
 
-        <div className="text-center mt-14 mb-6">
-          <h3 className="text-2xl md:text-3xl font-bold uppercase">
-            Todos nuestros sitios incluyen
-          </h3>
+          <div className="bg-white rounded-3xl p-7 shadow-xl border border-[#C89B3C]/10 min-h-[300px]">
+            <div className="w-16 h-16 mx-auto rounded-full bg-[#C89B3C]/10 flex items-center justify-center">
+              <CurrentIcon size={28} className="text-[#C89B3C]" />
+            </div>
+
+            <h3 className="text-xl font-bold text-[#1A1A1A] mt-5">
+              {services[current].title}
+            </h3>
+
+            <div className="w-10 h-[2px] bg-[#C89B3C] mt-3 mb-4 mx-auto"></div>
+
+            <p className="text-gray-600 leading-relaxed">
+              {services[current].description}
+            </p>
+          </div>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-[#071B3A]"
+          >
+            <FaChevronRight size={14} />
+          </button>
+
+          <div className="flex justify-center gap-2 mt-6">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`h-2 rounded-full transition-all ${
+                  current === index ? "w-8 bg-[#C89B3C]" : "w-2 bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-3 xl:grid-cols-6 gap-3 md:gap-4 max-w-6xl mx-auto">
-          {incluye.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-purple-500/40 bg-white/5 p-3 md:p-5 text-center backdrop-blur-xl"
-            >
-              <div className="mx-auto mb-2 md:mb-3 w-11 h-11 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-700 to-fuchsia-500 flex items-center justify-center text-white shadow-[0_0_25px_rgba(168,85,247,0.4)]">
-                {item.icon}
+        {/* DESKTOP: GRID */}
+        <div className="hidden md:grid md:grid-cols-3 xl:grid-cols-4 gap-8 mt-14">
+          {services.map((service) => {
+            const Icon = service.icon;
+
+            return (
+              <div
+                key={service.title}
+                className="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-[#C89B3C]/10 hover:-translate-y-2 transition text-left"
+              >
+                <div className="w-16 h-16 rounded-full bg-[#C89B3C]/10 flex items-center justify-center">
+                  <Icon size={28} className="text-[#C89B3C]" />
+                </div>
+
+                <h3 className="text-xl font-bold text-[#1A1A1A] mt-5">
+                  {service.title}
+                </h3>
+
+                <div className="w-10 h-[2px] bg-[#C89B3C] mt-3 mb-4"></div>
+
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h4 className="font-bold text-[10px] md:text-sm uppercase leading-tight">
-                {item.title}
-              </h4>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Servicios
+export default Services;

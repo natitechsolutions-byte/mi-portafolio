@@ -3,10 +3,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About';
-import Contact from './components/Contact';
-import Servicios from './components/Servicios';
-import Projects from './components/Projects';
+import Services from './components/Servicios';
+import Process from './components/Process';
+import Portfolio from './components/Portfolio';
+import Footer from './components/Footer';
+import AboutMe from './components/AboutMe';
 
 const App = () => {
 
@@ -28,14 +29,15 @@ const App = () => {
 
   return (
     //Cambia el fondo según el modo
-    <div className='
-      bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'>
+    <div className="bg-gradient-to-br from-white via-[#FAFAFA] to-[#F5F5F5] min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <Servicios />
-      <Projects />
-      <Contact />
+      <Services/>
+      <AboutMe/>
+      <Process/>
+      <Portfolio/>
+      <Footer/>
+      
     </div>
   )
 }

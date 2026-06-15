@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-body{
+body {
   font-family: 'Inter', sans-serif;
+}
+
+.font-Montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dark {
@@ -28,4 +30,29 @@ html {
 }
 html {
   scroll-padding-top: 90px;
+}
+
+.pixel-pattern {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 300px;
+  height: 300px;
+
+  background-image:
+    radial-gradient(rgba(255,255,255,0.6) 2px, transparent 2px);
+
+  background-size: 18px 18px;
+
+  mask-image: linear-gradient(
+    to bottom left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
 }
