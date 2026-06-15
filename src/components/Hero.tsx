@@ -34,7 +34,7 @@ const Hero = () => {
       >
         {/* TEXTO */}
         <div className="relative z-20 order-1 w-full text-center lg:text-left">
-          <p className="text-[#C89B3C] font-extrabold tracking-[0.18em] text-xs sm:text-sm mb-3">
+          <p className="text-[#C89B3C] font-extrabold tracking-[0.18em] text-xs mb-3">
             NATITECH SOLUTIONS
           </p>
 
