@@ -3,7 +3,6 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaLaptopCode,
-  FaShoppingCart,
   FaPaintBrush,
   FaCog,
 } from "react-icons/fa";
@@ -14,12 +13,6 @@ const services = [
     title: "Página web profesional",
     description:
       "Sitios modernos para mostrar tu empresa, servicios, ubicación y contacto.",
-  },
-  {
-    icon: FaShoppingCart,
-    title: "Catálogo digital",
-    description:
-      "Muestra tus productos o servicios de forma ordenada, moderna y fácil de compartir.",
   },
   {
     icon: FaPaintBrush,
@@ -49,13 +42,13 @@ const Services = () => {
   const CurrentIcon = services[current].icon;
 
   return (
-    <section id="services" className="py-16 overflow-hidden bg-white">
+    <section id="services" className="py-16 md:py-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 text-center">
         <p className="text-[#C89B3C] font-bold tracking-[0.25em] text-xs md:text-sm">
           SERVICIOS
         </p>
 
-        <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight">
+        <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight max-w-5xl mx-auto">
           Soluciones web para que tu negocio destaque en internet
         </h2>
 
@@ -104,15 +97,15 @@ const Services = () => {
           </div>
         </div>
 
-        {/* DESKTOP: GRID */}
-        <div className="hidden md:grid md:grid-cols-3 xl:grid-cols-4 gap-8 mt-14">
+        {/* DESKTOP: 3 TARJETAS CENTRADAS */}
+        <div className="hidden md:grid grid-cols-3 gap-8 mt-14 max-w-5xl mx-auto">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-[#C89B3C]/10 hover:-translate-y-2 transition text-left"
+                className="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-[#C89B3C]/10 hover:-translate-y-2 transition-all duration-300 text-left h-full"
               >
                 <div className="w-16 h-16 rounded-full bg-[#C89B3C]/10 flex items-center justify-center">
                   <Icon size={28} className="text-[#C89B3C]" />
