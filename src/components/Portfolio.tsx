@@ -15,10 +15,6 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="relative overflow-hidden py-14 md:py-16 bg-white">
-      {/* Decoración suave */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="text-[#C89B3C] font-bold tracking-[0.25em] text-xs md:text-sm uppercase">

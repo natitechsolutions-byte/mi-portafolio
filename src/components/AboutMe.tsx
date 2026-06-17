@@ -12,9 +12,6 @@ const AboutMe = () => {
       id="sobre-mi"
       className="relative overflow-hidden bg-white py-14 md:py-16"
     >
-      <div className="absolute -top-32 -left-32 w-80 h-80 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-center">
           
