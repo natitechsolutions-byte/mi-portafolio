@@ -42,7 +42,7 @@ const Services = () => {
   const CurrentIcon = services[current].icon;
 
   return (
-    <section id="services" className="py-16 md:py-20 overflow-hidden bg-white">
+    <section id="services" className="py-14 md:py-16 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 text-center">
         <p className="text-[#C89B3C] font-bold tracking-[0.25em] text-xs md:text-sm">
           SERVICIOS

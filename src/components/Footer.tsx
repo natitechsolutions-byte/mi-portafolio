@@ -3,19 +3,16 @@ import {
   FaWhatsapp,
   FaInstagram,
   FaEnvelope,
-  FaPhoneAlt,
 } from "react-icons/fa";
 import logo from "../assets/footer.png";
 
 const Footer = () => {
   const [copied, setCopied] = useState("");
   const year = new Date().getFullYear();
-
-  const phone = "+56989305299";
   const email = "natitechsolutions@gmail.com";
   const instagram = "https://www.instagram.com/natitechsolutions";
 
-  const copyToClipboard = async (text, type) => {
+  const copyToClipboard = async (text:any, type:any) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(type);
@@ -69,7 +66,7 @@ const Footer = () => {
             </div>
 
             {/* Botón + íconos */}
-            <div className="flex flex-col items-center lg:items-end gap-5">
+            <div className="flex flex-col items-center lg:items-center gap-5">
               <a
                 href="https://wa.me/56989305299"
                 target="_blank"
@@ -77,25 +74,11 @@ const Footer = () => {
                 className="inline-flex items-center justify-center gap-2 bg-[#C89B3C] text-white px-6 py-3.5 rounded-full text-sm font-bold shadow-[0_16px_35px_rgba(200,155,60,0.26)] hover:bg-white hover:text-[#0B0B0B] hover:-translate-y-1 transition-all duration-300"
               >
                 <FaWhatsapp size={17} />
-                Contactar
+                Cotizar por WhatsApp
               </a>
 
               {/* Íconos solos */}
               <div className="flex items-center justify-center gap-4">
-                <button
-                  type="button"
-                  onClick={() => copyToClipboard(phone, "phone")}
-                  title="Copiar número"
-                  className="relative w-11 h-11 rounded-full border border-white/10 bg-white/[0.05] flex items-center justify-center text-[#C89B3C] hover:bg-[#C89B3C] hover:text-white hover:-translate-y-1 transition-all duration-300"
-                >
-                  <FaPhoneAlt size={15} />
-
-                  {copied === "phone" && (
-                    <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 bg-white text-black text-[11px] font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-lg">
-                      Número copiado
-                    </span>
-                  )}
-                </button>
 
                 <a
                   href={instagram}
@@ -126,7 +109,7 @@ const Footer = () => {
           </div>
 
           {/* Parte inferior compacta */}
-          <div className="mt-7 pt-5 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/40 text-center md:text-left">
+          <div className="mt-7 pt-5 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2 text-[12px] text-white/50 text-center md:text-left">
             <p>© {year} NatiTechSolutions. Todos los derechos reservados.</p>
             <p>Páginas web modernas para empresas, emprendedores y profesionales.</p>
           </div>

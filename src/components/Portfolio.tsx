@@ -14,7 +14,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="relative overflow-hidden py-20 md:py-24 bg-white">
+    <section id="portfolio" className="relative overflow-hidden py-14 md:py-16 bg-white">
       {/* Decoración suave */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#C89B3C]/10 rounded-full blur-3xl" />
