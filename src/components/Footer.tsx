@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer
-      id="contact"
+      id="footer"
       className="relative overflow-hidden bg-[#0B0B0B] text-white"
     >
       {/* Luces decorativas suaves */}
