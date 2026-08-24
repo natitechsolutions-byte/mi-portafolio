@@ -12,19 +12,19 @@ const services = [
     icon: FaLaptopCode,
     title: "Página web profesional",
     description:
-      "Sitios modernos para mostrar tu empresa, servicios, ubicación y contacto.",
+      "Creamos una página web moderna y profesional para que tus clientes conozcan tu negocio, tus servicios y puedan contactarte fácilmente.",
   },
   {
     icon: FaPaintBrush,
     title: "Rediseño web",
     description:
-      "Modernizamos páginas antiguas para que se vean actuales, rápidas y profesionales.",
+      "¿Tu página se ve antigua o ya no representa tu negocio? La renovamos con un diseño moderno, claro y adaptado a celulares.",
   },
   {
     icon: FaCog,
     title: "Mantención web",
     description:
-      "Cambios, actualizaciones y soporte para mantener tu sitio funcionando correctamente.",
+      "Mantén tu sitio actualizado y funcionando correctamente. Realizamos cambios, actualizaciones y mejoras cuando las necesites.",
   },
 ];
 
@@ -49,8 +49,12 @@ const Services = () => {
         </p>
 
         <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight max-w-5xl mx-auto">
-          Soluciones web para que tu negocio destaque en internet
+          Todo lo que necesitas para tener una presencia profesional en internet
         </h2>
+         
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Desde la creación de tu página web hasta su actualización y mantención. Te ayudamos a tener un sitio moderno, claro y preparado para tus clientes.
+                  </p>
 
         {/* MOBILE: CARRUSEL */}
         <div className="md:hidden mt-10 relative max-w-[360px] mx-auto">

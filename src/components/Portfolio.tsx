@@ -7,7 +7,7 @@ const Portfolio = () => {
       title: "Asesoría Alexandra",
       category: "Web profesional",
       description:
-        "Sitio web corporativo desarrollado para presentar servicios contables, tributarios y laborales de forma clara, elegante y profesional.",
+        "Diseño y desarrollo de un sitio web profesional para presentar sus servicios contables, tributarios y laborales de forma clara, moderna y confiable.",
       img: img,
       url: "https://asesoriasalexandra.cl/",
     },
@@ -22,12 +22,11 @@ const Portfolio = () => {
           </p>
 
           <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 text-black">
-            Proyecto destacado
+            Proyectos creados para negocios reales
           </h2>
 
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-            Una muestra real del trabajo realizado, enfocada en diseño profesional,
-            presencia digital y experiencia de usuario.
+            Cada proyecto es diseñado pensando en las necesidades, identidad y objetivos de cada cliente.
           </p>
         </div>
 
@@ -76,7 +75,7 @@ const Portfolio = () => {
                   </p>
 
                   <div className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#C89B3C] px-6 py-3 text-white text-sm font-bold shadow-[0_14px_35px_rgba(200,155,60,0.30)] transition-all duration-300 group-hover:gap-4 group-hover:bg-black">
-                    Ver proyecto
+                    Visitar sitio web
                     <FiExternalLink size={17} />
                   </div>
                 </div>

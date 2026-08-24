@@ -12,25 +12,25 @@ const Process = () => {
       number: "01",
       icon: MessageCircle,
       title: "Conversamos",
-      text: "Entiendo tu idea, negocio y lo que necesitas lograr.",
+      text: "Cuéntame sobre tu negocio, tus servicios y lo que quieres lograr con tu página web.",
     },
     {
       number: "02",
       icon: PenTool,
-      title: "Diseñamos",
-      text: "Creamos una propuesta visual moderna y profesional.",
+      title: "Creamos la propuesta",
+      text: "Definimos la estructura y diseñamos una propuesta visual pensada para tu negocio.",
     },
     {
       number: "03",
       icon: Code2,
-      title: "Desarrollamos",
-      text: "Convertimos el diseño en una página rápida, clara y responsive.",
+      title: "Desarrollamos tu sitio",
+      text: "Transformamos el diseño en una página web rápida, moderna y adaptada a computadores y celulares.",
     },
     {
       number: "04",
       icon: Rocket,
-      title: "Entregamos",
-      text: "Tu web queda lista para mostrarla a tus clientes.",
+      title: "Publicamos",
+      text: "Revisamos los últimos detalles y dejamos tu página lista para que puedas compartirla con tus clientes.",
     },
   ];
 
@@ -48,7 +48,7 @@ const Process = () => {
         </p>
 
         <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight">
-          Simple, claro y eficiente
+          Así creamos tu página web
         </h2>
 
         <div className="grid md:grid-cols-4 gap-6 lg:gap-8 mt-14">
