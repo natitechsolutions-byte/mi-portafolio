@@ -75,11 +75,11 @@ const Hero = () => {
   "
             >
               <span className="block 2xl:whitespace-nowrap">
-                PÁGINAS WEB MODERNAS
+                Haz que tu negocio
               </span>
 
               <span className="block text-[#C89B3C]">
-                PARA EMPRESAS Y EMPRENDEDORES
+                destaque en internet
               </span>
             </h1>
           </div>

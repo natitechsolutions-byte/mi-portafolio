@@ -56,12 +56,11 @@ const Footer = () => {
               </p>
 
               <h2 className="font-Montserrat font-extrabold text-2xl md:text-4xl leading-tight">
-                Hablemos de tu proyecto
+                ¿Tienes una idea? Hagámosla realidad?
               </h2>
 
               <p className="text-white/60 mt-3 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Cuéntame qué necesitas y creemos una página web profesional,
-                clara y adaptada a tu negocio.
+                Cuéntame sobre tu negocio o proyecto y conversemos sobre cómo crear una presencia digital profesional para ti.
               </p>
             </div>
 
@@ -74,7 +73,7 @@ const Footer = () => {
                 className="inline-flex items-center justify-center gap-2 bg-[#C89B3C] text-white px-6 py-3.5 rounded-full text-sm font-bold shadow-[0_16px_35px_rgba(200,155,60,0.26)] hover:bg-white hover:text-[#0B0B0B] hover:-translate-y-1 transition-all duration-300"
               >
                 <FaWhatsapp size={17} />
-                Cotizar por WhatsApp
+                Hablar por WhatsApp
               </a>
 
               {/* Íconos solos */}

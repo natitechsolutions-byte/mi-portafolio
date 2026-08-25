@@ -51,10 +51,9 @@ const Services = () => {
         <h2 className="font-Montserrat font-bold text-3xl md:text-5xl mt-4 leading-tight max-w-5xl mx-auto">
           Todo lo que necesitas para tener una presencia profesional en internet
         </h2>
-         
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                    Desde la creación de tu página web hasta su actualización y mantención. Te ayudamos a tener un sitio moderno, claro y preparado para tus clientes.
-                  </p>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          Desde la creación de tu página web hasta su actualización y mantención. Te ayudamos a tener un sitio moderno, claro y preparado para tus clientes.
+        </p>
 
         {/* MOBILE: CARRUSEL */}
         <div className="md:hidden mt-10 relative max-w-[360px] mx-auto">
@@ -93,9 +92,8 @@ const Services = () => {
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`h-2 rounded-full transition-all ${
-                  current === index ? "w-8 bg-[#C89B3C]" : "w-2 bg-gray-300"
-                }`}
+                className={`h-2 rounded-full transition-all ${current === index ? "w-8 bg-[#C89B3C]" : "w-2 bg-gray-300"
+                  }`}
               />
             ))}
           </div>
